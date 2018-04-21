@@ -14,7 +14,7 @@ class ViewController: UIViewController{
 
     @IBAction func notePressed(_ sender: UIButton) {
         // reference to a wave sound location
-        let url = Bundle.main.url(forResource: noteArray[sender.tag], withExtension: "wav")
+        let url = Bundle.main.url(forResource: noteArray[sender.tag-1], withExtension: "wav")
         
         do {
             try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
